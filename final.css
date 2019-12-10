@@ -1,0 +1,121 @@
+body{
+background-color: #4F634E;
+}
+
+.backgroundimg img{
+ width: 100%;
+ height: auto;
+overflow: hidden;
+ background-repeat: no-repeat;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ margin: 0;
+ position: fixed;
+  top: 0;
+  left: 0;
+   min-height: 100%;
+  min-width: 1024px;
+  opacity: 50%;
+  visibility: visible;
+  transition: visibility 0s, opacity 3s ease 0.10s;
+}
+
+
+
+
+h1{
+	font-family: Josefin Sans;
+	font-size: 40px;
+	color: white;
+	position: absolute;
+	top: 300px;
+	left: 300px;
+ 	justify-content: center; 
+ 	align-items: center
+ 	margin:auto auto;
+ 	transform: translatex(-50%);
+	opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+     animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+h2{
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	top: 400px;
+	left: 640px;
+ 	transform: translatex(-50%);
+	opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+     animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.button{
+	font-family: Montserrat;
+	font-style: medium;
+	font-size: 15px;
+	color: #FFDC00;
+	border-radius: 30px 30px 30px 30px;
+	width: 180px;
+	height: 30px;
+ 	display: table-cell;
+    vertical-align: middle;
+    border-style: solid;
+	border-color: white;
+	text-align: center;
+	top: 460px;
+	left: 600px;
+	position: relative;
+	border-width: 1px;
+	opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+     animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+  	animation-delay: 3s;
+
+}
+
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+
+
+.button:hover{
+	cursor: pointer;
+	 -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+	border-color: #FFDC00;
+	color: #FFDC00;
+}
+
+.button:click{}

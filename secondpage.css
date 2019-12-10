@@ -1,0 +1,204 @@
+body{
+background-color: #4F634E;
+}
+
+.backgroundimg img{
+ width: 100%;
+ height: auto;
+ background-repeat: no-repeat;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ margin: 0;
+ position: fixed;
+  top: 0;
+  left: 0;
+   min-height: 100%;
+  min-width: 1024px;
+  opacity: 50%;
+  visibility: visible;
+  transition: visibility 0s, opacity 3s ease 0.10s;
+
+}
+
+h2{
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 330px;
+  left: 490px;
+  transform: translatex(-50%);
+  opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+     animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+
+.stars{
+  position: absolute;
+  border-radius: 90%;
+  height: 100px;
+  width: 100px;
+  color: white;
+}
+
+h1{
+  font-family: Josefin Sans;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 250px;
+  left: 470px;
+  justify-content: center; 
+  align-items: center
+  margin:auto auto;
+  transform: translatex(-50%);
+  opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+     animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.button1{
+  font-family: Montserrat;
+  background-image:url('../assets/images/treetrunk.png');
+  background-size: 147px;
+  font-style: bold;
+  font-size: 18px;
+  color: #FFDC00;
+  border-radius: 50%;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+    vertical-align: middle;
+    border-style: solid;
+  border-color: white;
+  text-align: center;
+  top: 420px;
+  left: 400px;
+  position: relative;
+  border-width: 2px;
+  opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+     animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-delay: 3s;
+
+}
+
+.button2{
+  font-family: Montserrat;
+  background-image:url('../assets/images/treetrunk.png');
+  background-size: 147px;
+  font-style: bold;
+  font-size: 18px;
+  color: #FFDC00;
+  border-radius: 50%;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+    vertical-align: middle;
+    border-style: solid;
+  border-color: white;
+  text-align: center;
+  top: 420px;
+  left: 485px;
+  position: relative;
+  border-width: 2px;
+  opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+     animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-delay: 3s;
+
+}
+
+.button3{
+  font-family: Montserrat;
+  background-image:url('../assets/images/treetrunk.png');
+  background-size: 147px;
+  font-style: bold;
+  font-size: 18px;
+  color: #FFDC00;
+  border-radius: 50%;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+    vertical-align: middle;
+    border-style: solid;
+  border-color: white;
+  text-align: center;
+  top: 420px;
+  left: 570px;
+  position: relative;
+  border-width: 2px;
+  opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+     animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-delay: 3s;
+
+}
+
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+
+.button1:hover{
+  cursor: pointer;
+   -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+  border-color: #FFDC00;
+  color: #FFDC00;
+}
+
+.button2:hover{
+  cursor: pointer;
+   -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+  border-color: #FFDC00;
+  color: #FFDC00;
+}
+
+.button3:hover{
+  cursor: pointer;
+   -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+  border-color: #FFDC00;
+  color: #FFDC00;
+}
+.button:click{}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="360&deg; Image - A-Frame">
+<script src="assets/js/aframe-master.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+<script src="assets/js/aframe-animation-component.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700|Montserrat:400i,500&display=swap" rel="stylesheet">
+<meta aframe-injected name="mobile-web-app-capable" content="yes">
+</style>
+</head>
+
+<body>
+<a-scene>
+<a-sky src="assets/images/vrimage2.jpg" rotation="0 -130 0" ></a-sky>
+<a-camera id="main-camera" visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
+cursor="rayOrigin: mouse;" raycaster="objects: .clickable">
+<a-cursor objects=".clickable" fuse="true" position="0 0 -1" rotation="0 0 0"
+scale="1 1 1" geometry="radiusInner: 0.02; radiusOuter: 0.03; thetaLength: 360; thetaStart: 90;"
+color="#ffffff" opacity="1" shader="flat" repeat="1 1" visible="true"></a-cursor>
+
+<a-ring id="fuse-progress" position="0 0 -0.999" rotation="0 0 0" scale="1 1 1"
+radius-inner="0.02" radius-outer="0.03" theta-length="360" theta-start="90" color="#348aa7"
+opacity="0" shader="flat" repeat="1 1" visible="true" class="clickable" animation="startEvents: fusing; property: geometry.thetaLength; to: 0; dur: 1500; easing: linear; delay: 0; dir: normal; loop: 0; from: 360;"
+animation__1="startEvents: fusing; property: opacity; to: 1; dur: 500; easing: linear; delay: 0; dir: normal; loop: 0; from: 0;"></a-ring>
+</a-camera>
+</a-entity>
+
+<a-assets>
+<img id="circletexture" src="assets/images/eyeicon.jpg">
+</a-assets>
+<a-circle id="Fact-One" foo position="-1.2 1 -7" color="white" src="#circletexture"scale="0.2 0.2 0.2" visable="true" class="clickable" 
+event-set__mouseenter="scale: 0.3 0.3 0.3"
+event-set__mouseenter_1="_target: a-box; visible: true;"
+event-set__mouseleave="scale: 0.2 0.2 0.2"
+>
+</a-circle>
+
+<a-box id="FactOnepopup" position="0.7 1.4 -4" rotation="2 6 1"color="white" depth="0.001" width="3.00" height="1" scale="0.75 0.75 0.75" opacity="1" 
+text="align: center; opacity: 1; color: black; value: Silver Falls is over a 177-foot curtain of water, containing ten waterfalls. This created the name 'Trail of Ten Falls'. The full Trail of 10 Falls consists of Canyon Trail and Rim Trail, for a 7 mile loop. "
+roughness="1" repeat="1 1" visible="false" 
+animation="
+startEvents: 'trigger-clicked'; 
+property: material.opacity; to: 1;
+text.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; ">
+</a-box>
+
+<a-circle id="fact-two" foo2 position="6 1 1" rotation="1 -90 2" color="white" src="#circletexture"scale="0.2 0.2 0.2" visable="true" class="clickable"
+event-set__mouseenter="scale: 0.3 0.3 0.3"
+event-set__mouseleave="scale: 0.2 0.2 0.2"
+material geometry>
+</a-circle>
+
+<a-box id="Facttwopopup" position="4 1.3 2.5" rotation="1 -100 2"color="white" depth="0.001" width="5" height="2.5" scale="0.55 0.55 0.55" opacity="1" visible="false"
+text="align: center; opacity: 1; font-size: 12px; color: black; value: The canyon's formation begins about 26 million years ago to the Oligocene period. After the waters of the ocean receded about 15 million years ago, the flood basalt flows of the Columbia River Basalt Group covered the sandstone that had been the ocean floor. The softer layers of sandstone beneath the basalt sheet eroded over time, creating pathways behind some of the waterfalls that Civilian Conservation Corps workers widened to make safe for public use."
+roughness="1" repeat="1 1" visible="true" 
+animation="
+startEvents: 'trigger-clicked'; 
+property: material.opacity; to: 1;
+text.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; ">
+</a-box>
+
+
+<a-circle id="factthree" foo3 position="1 5 10" rotation="1 -180 2" color="white" src="#circletexture"scale="0.4 0.4 0.4" visable="true" class="clickable"
+event-set__mouseenter="scale: 0.5 0.5 0.5"
+event-set__mouseleave="scale: 0.4 0.4 0.4"
+>
+</a-circle>
+
+<a-box id="Factthreepopup" position="-1 3 4" rotation="1 -180 2"color="white" depth="0.001" width="3.00" height="1" scale="0.75 0.75 0.75" opacity="1" 
+text="align: center; opacity: 1; color: black; value: Another geologic feature are many tree 'chimneys' or casts, formed when hot lava engulfed living trees and disintegrated them. "
+roughness="1" repeat="1 1" visible="false" >
+</a-box>
+
+</a-scene>
+
+<div style="
+position:absolute;
+font-family: Montserrat;
+top:0px; 
+left:0px; 
+width: 100%;
+z-index:1000;
+background: rgba(255,255,255,0.8); 
+padding: 0.1% 2% 0.1% 0.1%;
+  font-size: 1.2rem;
+  text-align: center;
+">
+Take a look around by dragging your mouse! Click the icons to learn more about the area. 
+</div>
+</div>
+<script>
+ AFRAME.registerComponent("foo", {
+    init: function() {
+      this.el.addEventListener("click", (e) => {
+        let box = document.querySelector("#FactOnepopup")
+        box.setAttribute("visible", !box.getAttribute("visible"))
+      })
+    }
+  })
+ AFRAME.registerComponent("foo2", {
+    init: function() {
+      this.el.addEventListener("click", (e) => {
+        let box = document.querySelector("#Facttwopopup")
+        box.setAttribute("visible", !box.getAttribute("visible"))
+      })
+    }
+  })
+ AFRAME.registerComponent("foo3", {
+    init: function() {
+      this.el.addEventListener("click", (e) => {
+        let box = document.querySelector("#Factthreepopup")
+        box.setAttribute("visible", !box.getAttribute("visible"))
+      })
+    }
+  })
+</script>
+  </body>
+</html>
